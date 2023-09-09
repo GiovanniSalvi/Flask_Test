@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "lab1-web",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}/",
+            "program": "lab1.py",
+            "args": ["web","--log_level","INFO","--autoreload"],
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "pwa-msedge",
+            "name": "Launch Microsoft Edge",
+            "request": "launch",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "url": "http://127.0.0.1:5015",
+            "presentation": {
+                "hidden": true
+            }
+        },
+    ],
+    "compounds": [
+        {
+            "name": "lab1",
+            "configurations": ["lab1-web", "Launch Microsoft Edge"]
+        }
+      ]
+}

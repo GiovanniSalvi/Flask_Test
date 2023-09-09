@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/x-icon">
+        <script src="{{ url_for('static', filename='includes/popper/js/popper.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='includes/bootstrap/css/bootstrap.min.css') }}">
+        <script src="{{ url_for('static', filename='includes/bootstrap/js/bootstrap.min.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='includes/bootstrap-icons/bootstrap-icons.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+        <script src="{{ url_for('static', filename='includes/jquery/js/jquery.min.js') }}"></script>
+        <script type="module" src="{{ url_for('static', filename='components/searchDropdown/searchDropdown.js') }}"></script>
+    </head>
+    <body>
+        <header id="nav" class="site-header sticky-top">
+            <nav class="container-fluid flex-md-row justify-content-between pe-0" id="topbar">
+                <div class="d-flex">
+                    <a exact class="home" href="/">Lab - 1</a>
+                    <a exact class="link bi-table" href="/results"> <span>Results</span></a>
+                    <a exact class="link bi-plus" id="conducts" href="/new"> <span>New</span></a>
+                </div>
+            </nav>
+        </header>
+        
+        <main class="container_main">
+            <div class="position-relative overflow-hidden px-5 mx-3 mt-4" id="container_main_overflow">
+                {% block main %}
+                    Welcome to simple request system 1.0
+                {% endblock %}
+            </div>
+        </main>
+    </body>
+</html>

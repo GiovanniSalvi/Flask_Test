@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block main %}
+    <div style="height: 100%">
+        <table id="resultsTable" class="table table-striped workersTable text-nowrap mb-0">
+            <thead>
+                <tr>
+                    <th>ID</td>
+                    <th>Name</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in resultsList|sort(attribute='name') %}
+                    <tr>
+                        <td>{{ result["_id"] | safe }}</td>
+                        <td>{{ result["name"] | safe }}</td>
+                        <td>{{ result["mainType"] | safe }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

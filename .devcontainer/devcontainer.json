@@ -1,0 +1,22 @@
+{
+	"name": "Python 3 & mongodb",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"mongodb.mongodb-vscode",
+		"streetsidesoftware.code-spell-checker"
+	],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [27017],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand" : "",
+
+	"remoteUser": "vscode"
+}
